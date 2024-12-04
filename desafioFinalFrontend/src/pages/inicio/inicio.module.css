@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  height: 75vh;
+  width: 100%;
+  background-image: url("../../assets/bannerInicio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhamento à esquerda no desktop */
+  padding-left: 6%;
+  padding-right: 6%;
+  transition: padding 0.3s ease;
+  /* Animação para suavizar a entrada do texto */
+  /* Responsividade: Centralizar em telas menores */
+}
+.hero h2 {
+  color: #FFF;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: left; /* Alinhado à esquerda */
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  animation: fadeInLeft 1.5s ease-out forwards; /* Animação suave de entrada */
+  width: 50%; /* Tamanho controlado */
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center; /* Centraliza o texto */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+  .hero h2 {
+    font-size: 2rem;
+    width: 80%;
+    animation: fadeIn 1.5s ease-out forwards; /* Animação centralizada */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.whyDonate {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.whyDonate h2 {
+  font-size: 2.5rem;
+  color: #005695;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  transition: transform 0.4s ease;
+}
+.cards article {
+  background: rgba(1, 87, 148, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cards article img {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+.cards article p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+.cards article:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    padding-left: 0;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+  .whyDonate h2 {
+    font-size: 2rem;
+  }
+  .cards {
+    gap: 1rem;
+  }
+  .cards article img {
+    max-width: 60px;
+  }
+  .cards article p {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .cards {
+    gap: 0.5rem;
+  }
+  .cards article img {
+    max-width: 50px;
+  }
+}/*# sourceMappingURL=inicio.module.css.map */

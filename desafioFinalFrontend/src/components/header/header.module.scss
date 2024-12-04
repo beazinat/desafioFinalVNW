@@ -1,0 +1,102 @@
+.header {
+    background: linear-gradient(90deg, #001B2F 0%, #005695 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.logoHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 50px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        color: #FFF;
+        cursor: pointer;
+    }
+}
+
+.navHeader {
+    ul {
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .link {
+        color: #FFF;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #FFCC00;
+        }
+    }
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+
+    input {
+        flex: 1;
+        background: transparent;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        color: #FFF;
+        padding: 5px 10px;
+
+        &::placeholder {
+            color: #CCC;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoHeader {
+        margin-bottom: 10px;
+    }
+
+    .navHeader ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

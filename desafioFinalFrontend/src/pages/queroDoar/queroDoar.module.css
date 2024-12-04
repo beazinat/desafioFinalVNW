@@ -1,0 +1,123 @@
+.queroDoarSection {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+  background: linear-gradient(to right, #f0f4f8, #005695);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.queroDoarSection p {
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #d3e7fa, #003d69);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradientMove 10s linear infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+form {
+  border: solid #005695 3px;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+form div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #005695;
+}
+form h2 {
+  font-size: 24px;
+  color: #005695;
+  font-weight: bold;
+}
+form input {
+  width: 80%;
+  height: 45px;
+  border: 2px solid #005695;
+  border-radius: 15px;
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+form input::-moz-placeholder {
+  color: #888;
+}
+form input::placeholder {
+  color: #888;
+}
+form input:focus {
+  border-color: #003b61;
+  box-shadow: 0 0 10px rgba(0, 59, 97, 0.5);
+  outline: none;
+}
+
+.buttonDoar {
+  width: 60%;
+  height: 50px;
+  font-size: 20px;
+  background-color: #005695;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.buttonDoar:hover {
+  background-color: #003b61;
+  transform: scale(1.05);
+}
+
+@media (max-width: 780px) {
+  .queroDoarSection {
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+  form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  div {
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  input {
+    height: 40px;
+  }
+  .buttonDoar {
+    width: 70%;
+    height: 45px;
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=queroDoar.module.css.map */

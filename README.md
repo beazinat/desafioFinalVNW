@@ -72,7 +72,7 @@ Este projeto é de código aberto, então sinta-se à vontade para usá-lo e ada
 
 ## 📝 **Agradecimentos**
 
-Agradeço imensamente à Fernanda Corrêa e João Pedro Belo pela instrução e incentivo bem como ao apoio de à toda equipe do Vai Na Web 💖
+Agradeço imensamente à Fernanda Corrêa e João Pedro Belo pela instrução e incentivo, bem como ao apoio de toda equipe do Vai Na Web 💖
 
 ---
 

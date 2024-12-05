@@ -5,31 +5,33 @@
 }
 
 .hero {
-    height: 75vh;
+    min-height: 75vh; /* Usa min-height para garantir que o espaço será suficiente */
     width: 100%;
     background-image: url('../../assets/bannerInicio.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinhamento à esquerda no desktop */
+    flex-direction: column; /* Alinha os itens de forma que o conteúdo se ajuste */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Garante que o texto se posicione no centro */
     padding-left: 6%;
     padding-right: 6%;
     transition: padding 0.3s ease;
+    position: relative;
 
     h2 {
         color: #FFF;
         font-size: 3rem;
         font-weight: 600;
-        text-align: left; /* Alinhado à esquerda */
+        text-align: left;
         opacity: 0;
         transform: translateX(-30px);
         transition: opacity 1s ease-out, transform 1s ease-out;
-        animation: fadeInLeft 1.5s ease-out forwards; /* Animação suave de entrada */
-        width: 50%; /* Tamanho controlado */
+        animation: fadeInLeft 1.5s ease-out forwards;
+        width: 50%; /* Controla o tamanho do texto */
+        white-space: normal; /* Permite que o texto quebre se necessário */
     }
 
-    /* Animação para suavizar a entrada do texto */
     @keyframes fadeInLeft {
         0% {
             opacity: 0;
@@ -41,24 +43,34 @@
         }
     }
 
-    /* Responsividade: Centralizar em telas menores */
+    /* Responsividade para telas médias */
     @media (max-width: 768px) {
-        justify-content: center; /* Centraliza o texto */
-        text-align: center; /* Alinha o texto ao centro */
+        min-height: 50vh; /* Ajusta a altura para dispositivos médios */
+        padding-left: 4%; /* Reduz padding para mais espaço para o texto */
+        padding-right: 4%; 
+
         h2 {
             font-size: 2rem;
-            width: 80%;
-            animation: fadeIn 1.5s ease-out forwards; /* Animação centralizada */
+            width: 80%; /* Ajusta a largura do texto */
         }
     }
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
+    /* Responsividade para telas pequenas */
+    @media (max-width: 480px) {
+        min-height: 40vh; /* Ajusta ainda mais a altura para telas muito pequenas */
+        h2 {
+            font-size: 1.5rem;
+            width: 90%;
         }
-        100% {
-            opacity: 1;
-        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -151,4 +163,4 @@
     .cards article img {
         max-width: 50px;
     }
-}
+} 
